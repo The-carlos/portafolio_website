@@ -56,10 +56,18 @@
     margin-bottom: 10px;
   }
   
+  /* About section styles */
+  .about-paragraph {
+    background-color: #e2dfddb4;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  
   /* Footer styles */
   footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #aaa7a7;
+    color: #ddd9d9;
     padding: 10px;
     text-align: center;
     font-size: 14px;
@@ -70,4 +78,13 @@
     text-decoration: none;
   }
   
+  .zoom-section {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s, transform 0.8s;
+  }
   
+  .zoom-section.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
