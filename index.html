@@ -1,51 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
   <header>
-    <h1>Your Name</h1>
+    <h1>Carlos Sánchez</h1>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button id="scrollToTopBtn">Back to Top</button>
   </header>
 
-  <section id="about" class="zoom-section">
+
+  <section id="about">
     <h2>About Me</h2>
-        <p class="about-paragraph">Hello, world!
-            My name is Carlos. I am a Data scientist skilled in technologies such as Pandas, Supervised & Unsupervised Machine Learning models with Python, Power BI dashboards, and datasets development, also I am experienced with SQL.
-            I am interested in continuing my professional path in data science teams to solve problems related to Machine Learning and data, always with a human sense of responsibility.
-            Throughout my career, I have worked with multidisciplinary teams to solve complex problems such as developing an unsupervised model to cluster users, fraudulent transactions detection classifier models, and creating tailored dashboards using Power BI to track business performance.
-            During these years there is nothing I have enjoyed the most than connecting with other teams and learning from people in different fields, and of course, my favorite hobby: having fun coding. I truly believe in the responsible use of technology to improve common wellness, so if your project is trying to make this a better world for everybody, Count me on!
-        </p>    
-        <p class="about-paragraph">I will be thrilled to get in touch with you. Send me an e-mail at thecarlossanchezm@gmail.com and I will hit you back as soon as possible.</p>
-            
-            
-        <p>Work hard, be nice, sleep well and have fun!</p>
+    <div class="image-container">
+      <img src="me.jpeg" alt="Me" class="profile-image">
+    </div>
+    <div class="about-content">
+      <p>Hello, world!</p>
+      <p>My name is Carlos. I am a Data scientist skilled in technologies such as Pandas, Supervised & Unsupervised Machine Learning models with Python, Power BI dashboards, and datasets development, also I am experienced with SQL.
+      </p>
+      <p>I am interested in continuing my professional path in data science teams to solve problems related to Machine Learning and data, always with a human sense of responsibility.
+      </p>
+      <p>Throughout my career, I have worked with multidisciplinary teams to solve complex problems such as developing an unsupervised model to cluster users, fraudulent transactions detection classifier models, and creating tailored dashboards using Power BI to track business performance.
+      </p>
+      <p>During these years there is nothing I have enjoyed the most than connecting with other teams and learning from people in different fields, and of course, my favorite hobby: having fun coding. I truly believe in the responsible use of technology to improve common wellness, so if your project is trying to make this a better world for everybody, Count me on!
+      </p>
+      <p>Work hard, be nice, sleep well and have fun!</p>
+
+      <p><b>I have absolutely no idea about web development, but I figured out how to make this website with the help of chatGPT.🥳</b></p>
+    </div>
   </section>
   
 
-  <section id="projects" class="zoom-section">
-    <h2>Projects</h2>
-    <!-- Add your project showcase here -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-item">
+      <h3>Axtel | Alestra, International business Analyst.</h3>
+      <p class="experience-years"> Jan 2018 – Jun 2021 (3+ years)</p>
+      <ul>
+        <li>Created Business presentations for monthly and weekly follow-ups.</li>
+        <li>Managed communication during the pre-order process between our International customers (mail, phone & video calls) to ensure we can satisfy technical requirements.</li>
+        
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Billpocket, Data Analyst.</h3>
+      <p class="experience-years">Jun 2021 – Dic 2021 (6 months)</p>
+      <ul>
+        <li>Created up to 8 interactive dashboards for replacing old weekly and monthly reports using Power BI saving approx 3-4 hours of work per week and replacing manual excel reports.</li>
+        <li>Built Exploratory Data Analysis applications for solving business problems.</li>
+        <li>Helped the commercial team to take data-driven decisions by using automatic reports as a tool to guide their strategy instead of a manual & repetitive task.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Billpocket, Data Scientist.</h3>
+      <p class="experience-years">Jun 2021 – Dic 2021 (+1 year)</p>
+      <ul>
+        <li>Created, administered, and maintained all Power BI platform for the whole company.</li>
+        <li>Constructed Power BI datasets from DirectQuery (M) using SQL to set automatic updates.</li>
+        <li>Build the fraud detection Machine Learning Model for all the transactions processed by Billpocket using python and scikit-learn, git and docker.</li>
+        <li>Created a supervised learning model for the classification of those users that most probably will churn so the commercial team and communication can focus efforts on them.</li>
+        <li>Extracted information from many sources (Athena, MySQL, Mongo, etc) for business requirements through Jira platform.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <h3>Codehouse, Teacher assistant.</h3>
+      <p class="experience-years">Sep 2022 – present (+6 months)</p>
+      <ul>
+        <p>Teacher Assistant in specialized data science topics such as:</p>
+        <li>Data science intro</li>
+        <li>Intro to NumPy</li>
+        <li>Intro to Pandas</li>
+        <li>Descriptive statistics</li>
+        <li>AI and ML introduction</li>
+        <li>Databases intro</li>
+        <li>SQL queries</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Data visualizations and Data Storytelling</li>
+        <li>Regression and classification algorithms</li>
+      </ul>
+    </div>
+
+  </section>
+  
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <h1>Python</h1>
+        
+      </div>
+      <div class="skill">
+        <h1>Power BI</h1>
+    
+      </div>
+      <div class="skill">
+        <h1>GitHub</h1>
+    
+      </div>
+      <div class="skill">
+        <h1>MySQL</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Docker</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>AWS</h1>
+    
+      </div>
+      <div class="skill">
+        <h1>Pandas</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Supervised Learning</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Tableau</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Web Scraping</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Nunpy</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Scipy</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Pyplot</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Databases</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Beautiful Soup</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>ETL</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Machine Learning</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>SQL</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Data cleaning</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Raspberry Pi</h1>
+    
+      </div>
+
+      <div class="skill">
+        <h1>Athena</h1>
+    
+      </div>
+
+    </div>
+  </section>
+  
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-item">
+      <h3>Instituto Politecnico Nacional</h3>
+      <p class="education-years">Communications & electronics engineering</p>
+      <ul>
+        <li>Software development basics
+        </li>
+        <li>Linux & bash terminal</li>
+        <li>VIM</li>
+      </ul>
+    </div>
+    <div class="education-item">
+      <h3>Ironhack</h3>
+      <p class="education-years">Data Analytics Bootcamp</p>
+      <ul>
+        <li>Data Analysis using Python & MySQL
+        </li>
+        <li>Build, Evaluate & Deploy Machine Learning Models and Pipelines
+        </li>
+        <li>Data wrangling, Data Cleaning, API & Web Scraping</li>
+      </ul>
+    </div>
+    <!-- Add more education items as needed -->
+  </section>
+  
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Get in touch with me at thecarlossanchezm@gmail.com.</p>
   </section>
 
-  <section id="contact" class="zoom-section">
-    <h2>Contact Me</h2>
-    <!-- Add your contact information and form here -->
-  </section>
-
-  <footer>
-    <!-- Add your footer content here -->
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

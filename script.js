@@ -1,16 +1,18 @@
-window.addEventListener('scroll', function() {
-    var sections = document.querySelectorAll('.zoom-section');
-    var windowHeight = window.innerHeight;
-    
-    sections.forEach(function(section) {
-      var sectionTop = section.getBoundingClientRect().top;
-      var sectionBottom = section.getBoundingClientRect().bottom;
-      
-      if (sectionTop < windowHeight && sectionBottom >= 0) {
-        section.classList.add('visible');
-      } else {
-        section.classList.remove('visible');
-      }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollToTopBtn = document.querySelector('#scrollToTopBtn');
+
+  // Show/hide the button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
   });
-  
+
+  // Scroll to top when the button is clicked
+  scrollToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
