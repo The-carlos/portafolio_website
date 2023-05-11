@@ -136,13 +136,13 @@ section h2 {
 }
 
 
-.animate-skills {
-  opacity: 0; /* Start with 0 opacity */
-  transform: translateY(20px); /* Start with a slight vertical offset */
+.animate-section {
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
 }
 
-.animate-skills.animated {
-  opacity: 1; /* When animated class is added, fade in */
-  transform: translateY(0); /* When animated class is added, remove vertical offset */
+.animate-section.animated {
+  opacity: 1;
+  transform: translateY(0);
 }

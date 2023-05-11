@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const skillsSection = document.querySelector("#skills");
+const sections = document.querySelectorAll(".animate-section");
 
 const options = {
-  threshold: 0.5, // Percentage of section visibility required to trigger the animation
+  threshold: 0.5,
 };
 
-const animateSkills = (entries, observer) => {
+const animateSection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animated");
@@ -33,5 +33,8 @@ const animateSkills = (entries, observer) => {
   });
 };
 
-const skillsObserver = new IntersectionObserver(animateSkills, options);
-skillsObserver.observe(skillsSection);
+const sectionObserver = new IntersectionObserver(animateSection, options);
+
+sections.forEach((section) => {
+  sectionObserver.observe(section);
+});
