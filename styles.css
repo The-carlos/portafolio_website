@@ -2,12 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 header {
   background-color: #001d41;
   color: #fff;
   padding: 20px;
+  width: 100%;
 }
 
 h1 {
