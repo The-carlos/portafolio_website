@@ -134,3 +134,15 @@ section h2 {
 @media (min-width: 768px) {
   /* CSS rules specific to larger screens */
 }
+
+
+.animate-skills {
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateY(20px); /* Start with a slight vertical offset */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-skills.animated {
+  opacity: 1; /* When animated class is added, fade in */
+  transform: translateY(0); /* When animated class is added, remove vertical offset */
+}

@@ -16,3 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
+
+const skillsSection = document.querySelector("#skills");
+
+const options = {
+  threshold: 0.5, // Percentage of section visibility required to trigger the animation
+};
+
+const animateSkills = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animated");
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const skillsObserver = new IntersectionObserver(animateSkills, options);
+skillsObserver.observe(skillsSection);
