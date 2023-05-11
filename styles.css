@@ -146,3 +146,8 @@ section h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.animate-section.animated.reverse {
+  opacity: 0;
+  transform: translateY(-20px);
+}
