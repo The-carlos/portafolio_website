@@ -28,8 +28,7 @@ const animateSection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animated");
-    } else {
-      entry.target.classList.remove("animated");
+      observer.unobserve(entry.target);
     }
   });
 };
