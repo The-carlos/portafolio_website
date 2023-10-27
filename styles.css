@@ -7,11 +7,16 @@ body {
 }
 
 header {
-  background-color: #001d41;
-  color: #fff;
-  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  color: #fff;
+  background-color: #001d41; /* Add your desired background color */
+  z-index: 1000; /* Set a high z-index value to ensure it appears above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a drop shadow for a visual effect */
 }
+
 
 h1 {
   margin: 0;
