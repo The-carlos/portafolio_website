@@ -11,6 +11,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 20px;
   color: #fff;
   background-color: #001d41; /* Add your desired background color */
   z-index: 1000; /* Set a high z-index value to ensure it appears above other content */
