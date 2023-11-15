@@ -38,3 +38,5 @@ const sectionObserver = new IntersectionObserver(animateSection, options);
 sections.forEach((section) => {
   sectionObserver.observe(section);
 });
+
+
