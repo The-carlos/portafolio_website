@@ -55,9 +55,129 @@
   <!-- This section is made to create different project descriptions --> 
 
   <section id="project-1">
-    <h3>Anomaly Detection Machine Learning Model</h3>
-    <p>A machine learning model designed for anomaly detection purposes. This model utilizes XYZ algorithms and datasets to identify irregular patterns.</p>
-    <p>Here I can enter in details, also I can add differrent links and my shit.</p>
+  
+    <h1>Anomaly Detection Machine Learning Model</h1>
+
+    <h2>Overview</h2>
+
+    <p>The Anomalies Detection Model is a neural network designed to predict the future Total Payment Volume (TPV) behavior
+        of a group of merchants at two-hour intervals. The script leverages these predictions to estimate a minimum and
+        maximum TPV for each time point. If the actual TPV falls outside this range, a visual alarm is triggered.</p>
+
+    <h2>Technologies Used</h2>
+
+    <p>The project is implemented using a variety of technologies, including:</p>
+
+    <ul>
+        <li><strong>Pandas:</strong> Data manipulation and analysis.</li>
+        <li><strong>LSTM TensorFlow Neural Networks:</strong> Building and training the predictive model.</li>
+        <li><strong>SQL:</strong> Managing and querying databases.</li>
+        <li><strong>AWS Athena:</strong> Serverless query service for data analysis.</li>
+        <li><strong>Matplotlib:</strong> Creating visualizations for analysis.</li>
+    </ul>
+
+    <h2>Final Product</h2>
+
+    <p>The culmination of this project is a Power BI dashboard that automatically refreshes every two hours. The dashboard
+        provides a comprehensive view of the predicted and actual TPV, highlighting anomalies that require attention.</p>
+
+    <h2>Usage</h2>
+
+    <ol>
+        <li><strong>Data Preparation:</strong>
+            <ul>
+                <li>Ensure your dataset is formatted correctly.</li>
+                <li>Preprocess the data using the provided preprocessing scripts.</li>
+            </ul>
+        </li>
+        <li><strong>Model Training:</strong>
+            <ul>
+                <li>Execute the training script to train the LSTM TensorFlow Neural Network.</li>
+            </ul>
+        </li>
+        <li><strong>Prediction and Alarm:</strong>
+            <ul>
+                <li>Run the prediction script to obtain future TPV predictions.</li>
+                <li>The script will raise a visual alarm if the actual TPV is outside the predicted range.</li>
+            </ul>
+        </li>
+        <li><strong>Power BI Dashboard:</strong>
+            <ul>
+                <li>Access the Power BI dashboard for a real-time visualization of TPV anomalies.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Dependencies</h2>
+
+    <p>To ensure everything will work properly, install all dependencies included in the requirements file included in the
+        repo:</p>
+
+    <code>!pip install -r requirements.txt</code>
+
+    <h2>Step-by-step technical explanation.</h2>
+
+    <h3>Data wrangler</h3>
+
+    <p>First thing first. We need to get historical data to train the model. In order to achieve this I perform AWS Athena
+        queries iteratively. I could do it using MySQL instead, but due to the large number of rows needed AWS Athena
+        end up being the option with the best performance. I use the <strong>data_get.py</strong> script to perform the
+        data wrangler.</p>
+
+    <h4>Libraries and environment variables.</h4>
+
+    <p>We'll need pandas and numpy as a framework to manipulate data as well as datetime to generate dates used in the
+        script. Also, pyathena is needed to create the connection with AWS Athena and their respective keys:</p>
+
+    <pre><code>import pandas as pd
+import numpy as np
+from datetime import datetime
+from pyathena import connect
+
+# Cargar variables de entorno desde el archivo .env
+# Obtener las variables de entorno
+aws_access_key_id = "Access-key-de-la-empresa"
+aws_secret_access_key = "secret-access-key-de-la-empresa"
+aws_session_token = "session-token-de-la-empresa"
+s3_staging_dir = "s3-address"
+region_name = "region"
+</code></pre>
+
+    <!-- More content... -->
+
+    <h3>Data generation.</h3>
+
+    <p>I used 3 functions to get the data needed for the project: <strong>athena_query</strong>,
+        <strong>queries_string_generator</strong>, and <strong>data_get</strong>.</p>
+
+    <!-- More content... -->
+
+    <h4>Finally the implementation of the three functions.</h4>
+
+    <pre><code>start = datetime(2020, 1, 1)
+end = datetime(2023, 10, 1)
+queries_test = queries_string_generator(start, end)
+print(f"{len(queries_test)} queries fueron almacenadas")
+
+data_get(queries_test)
+</code></pre>
+
+    <!-- More content... -->
+
+    <h3>Data transform</h3>
+
+    <p>As I mentioned, the script is designed to make two-hour interval predictions, the next step is to transform the
+        raw data into time intervals. Basically, I just made a group_by using an interval and client_name. All the data
+        transformation is in the <strong>data_transform.py</strong> script.</p>
+
+    <!-- More content... -->
+
+    <h3>Data consolidation.</h3>
+
+    <p>Then, with the <strong>data_consolid.py</strong> script, I took all the .CSV files generated for the 2-hourly
+        intervals and concat them in a single file called <em>full_2_hourly.csv</em></p>
+
+    <!-- More content... -->
     <!-- Include content, images, explanations related to this project -->
   </section>
 
